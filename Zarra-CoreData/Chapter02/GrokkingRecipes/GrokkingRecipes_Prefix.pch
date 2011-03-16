@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'GrokkingRecipes' target in the 'GrokkingRecipes' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

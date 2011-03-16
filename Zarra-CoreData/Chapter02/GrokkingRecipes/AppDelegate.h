@@ -1,5 +1,5 @@
 //
-//  GrokkingRecipes_AppDelegate.h
+//  AppDelegate.h
 //  GrokkingRecipes
 //
 //  Created by Sam Krishna on 3/16/11.
@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface GrokkingRecipes_AppDelegate : NSObject 
+@interface AppDelegate : NSObject 
 {
     NSWindow *window;
     

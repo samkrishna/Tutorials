@@ -1,14 +1,14 @@
 //
-//  GrokkingRecipes_AppDelegate.m
+//  AppDelegate.m
 //  GrokkingRecipes
 //
 //  Created by Sam Krishna on 3/16/11.
 //  Copyright SectorMobile 2011 . All rights reserved.
 //
 
-#import "GrokkingRecipes_AppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation GrokkingRecipes_AppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 

@@ -14,6 +14,8 @@
 		6F9A51251535A0A60090A2C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A51241535A0A60090A2C6 /* main.m */; };
 		6F9A51291535A0A60090A2C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9A51281535A0A60090A2C6 /* AppDelegate.m */; };
 		6F9A51311535A0F60090A2C6 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9A512F1535A0F60090A2C6 /* MainWindow.xib */; };
+		6F9A513B1535A8250090A2C6 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9A513A1535A8250090A2C6 /* Icon@2x.png */; };
+		6F9A513D1535A8290090A2C6 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F9A513C1535A8290090A2C6 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		6F9A51271535A0A60090A2C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F9A51281535A0A60090A2C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6F9A51301535A0F60090A2C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		6F9A513A1535A8250090A2C6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		6F9A513C1535A8290090A2C6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 		6F9A51091535A0A60090A2C6 = {
 			isa = PBXGroup;
 			children = (
+				6F9A513C1535A8290090A2C6 /* Icon.png */,
+				6F9A513A1535A8250090A2C6 /* Icon@2x.png */,
 				6F9A511E1535A0A60090A2C6 /* Quiz */,
 				6F9A51171535A0A60090A2C6 /* Frameworks */,
 				6F9A51151535A0A60090A2C6 /* Products */,
@@ -145,6 +151,8 @@
 			files = (
 				6F9A51231535A0A60090A2C6 /* InfoPlist.strings in Resources */,
 				6F9A51311535A0F60090A2C6 /* MainWindow.xib in Resources */,
+				6F9A513B1535A8250090A2C6 /* Icon@2x.png in Resources */,
+				6F9A513D1535A8290090A2C6 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

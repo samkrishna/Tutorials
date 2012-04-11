@@ -14,4 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *answerField;
 @property (strong, nonatomic) IBOutlet UIWindow *window;
 
+- (IBAction)showQuestion:(id)sender;
+- (IBAction)showAnswer:(id)sender;
+
 @end

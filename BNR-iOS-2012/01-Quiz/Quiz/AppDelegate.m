@@ -55,10 +55,60 @@
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-@synthesize currentQuestionIndex = _currentQuestionIndex;
-@synthesize questions = _questions;
-@synthesize answers = _answers;
-@synthesize questionField = _questionField;
-@synthesize answerField = _answerField;
-@synthesize window = _window;
+#pragma mark - Lifecycle
+
+- (id)init
+{
+	if (!(self = [super init])) return nil;
+	
+	self.currentQuestionIndex = 0; // Don't need to do this, but we should be explicit while learning.
+	questions_ = [[NSMutableArray alloc] init];
+	answers_ = [[NSMutableArray alloc] init];
+
+	[self.questions addObject:@"What is 7 + 7?"];
+	[self.answers addObject:@"14"];
+	
+	[self.questions addObject:@"What is the capital of North Carolina?"];
+	[self.answers addObject:@"Raleigh"];
+	
+	[self.questions addObject:@"From what is cognac made?"];
+	[self.answers addObject:@"Grapes"];
+	
+	return self;
+}
+
+#pragma mark - Actions
+
+- (IBAction)showQuestion:(id)sender
+{
+	// Step to next question
+	self.currentQuestionIndex++;
+	
+	// Am I past the last question?
+	if (self.currentQuestionIndex == [self.questions count]) {
+		self.currentQuestionIndex = 0;
+	}
+	
+	// Get the string at the index in the questions array
+	NSString *question = [self.questions objectAtIndex:self.currentQuestionIndex];
+	NSLog(@"Displaying question: %@", question);
+	
+	self.questionField.text = question;
+	self.answerField.text = @"???";
+}
+
+- (IBAction)showAnswer:(id)sender
+{
+	NSString *answer = [self.answers objectAtIndex:self.currentQuestionIndex];
+	self.answerField.text = answer;
+}
+
+
+#pragma mark - Properties
+@synthesize currentQuestionIndex = currentQuestionIndex_;
+@synthesize questions = questions_;
+@synthesize answers = answers_;
+@synthesize questionField = questionField_;
+@synthesize answerField = answerField_;
+@synthesize window = window_;
 @end

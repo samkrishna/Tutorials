@@ -1,3 +1,16 @@
 4/11/2012:
 
 These tutorials are now a reboot of my developer skills inside of the Brave New World of all-multicore, all-the-time devices. These tutorials will be augmented with blocks-based code as well as agressive property usage and other runtime tricks as appropriate.
+
+The intention is to work through the following tutorial sets as quickly as possible:
+
+BNR's iOS Programming, 2nd ed.
+Rob Napier's iOS Programming: Pushing the Limits
+BNR's Mac OS X Programming, 4th Ed.
+BNR's Advanced Mac OS X Programming, 2nd Ed.
+Zarra Studios' Core Animation Guide
+Isted and Harrington's Core Data for iOS
+Marcus Zarra's Core Data iDeveloper TV video series
+Matt Long's Core Animation iDeveloper TV video series
+
+(and whatever else strikes the fancy)

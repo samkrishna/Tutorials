@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:SOCQ/SOCQ.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BlocksKit/BlocksKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:01-Quiz/Quiz.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:RandomPossesions/RandomPossesions.xcodeproj">
+   </FileRef>
+</Workspace>

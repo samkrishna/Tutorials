@@ -10,4 +10,12 @@
 
 @interface Possession : NSObject
 
+@property (strong) NSString *name;
+@property (strong) NSString *serialNumber;
+@property (assign) NSUInteger valueInDollars;
+@property (strong, readonly) NSDate *dateCreated;
+
++ (Possession *)randomPossession;
+- (id)initWithName:(NSString *)name valueInDollars:(NSUInteger)value serialNumber:(NSString *)sNumber;
+
 @end

@@ -10,6 +10,7 @@
 		6FED23B11536450B00F2F20C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FED23B01536450B00F2F20C /* Foundation.framework */; };
 		6FED23B41536450B00F2F20C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FED23B31536450B00F2F20C /* main.m */; };
 		6FED23B81536450B00F2F20C /* RandomPossesions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6FED23B71536450B00F2F20C /* RandomPossesions.1 */; };
+		6FED23C01536484A00F2F20C /* Possession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FED23BF1536484A00F2F20C /* Possession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +30,10 @@
 		6FED23AC1536450B00F2F20C /* RandomPossesions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomPossesions; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FED23B01536450B00F2F20C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6FED23B31536450B00F2F20C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6FED23B61536450B00F2F20C /* RandomPossesions-Prefix.pch */ = {isa = PBXFileReference; path = "RandomPossesions-Prefix.pch"; sourceTree = "<group>"; };
+		6FED23B61536450B00F2F20C /* RandomPossesions-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomPossesions-Prefix.pch"; sourceTree = "<group>"; };
 		6FED23B71536450B00F2F20C /* RandomPossesions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RandomPossesions.1; sourceTree = "<group>"; };
+		6FED23BE1536484A00F2F20C /* Possession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Possession.h; sourceTree = "<group>"; };
+		6FED23BF1536484A00F2F20C /* Possession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Possession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,8 @@
 			isa = PBXGroup;
 			children = (
 				6FED23B31536450B00F2F20C /* main.m */,
+				6FED23BE1536484A00F2F20C /* Possession.h */,
+				6FED23BF1536484A00F2F20C /* Possession.m */,
 				6FED23B71536450B00F2F20C /* RandomPossesions.1 */,
 				6FED23B51536450B00F2F20C /* Supporting Files */,
 			);
@@ -139,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6FED23B41536450B00F2F20C /* main.m in Sources */,
+				6FED23C01536484A00F2F20C /* Possession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

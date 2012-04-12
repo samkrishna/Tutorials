@@ -19,6 +19,7 @@
 		6F04FFA01536F28E004ABA9D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F04FF9F1536F28D004ABA9D /* MapKit.framework */; };
 		6F04FFA31537094E004ABA9D /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F04FFA21537094E004ABA9D /* MapPoint.m */; };
 		6F04FFA7153714C6004ABA9D /* NSDate+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F04FFA6153714C6004ABA9D /* NSDate+Helper.m */; };
+		6F04FFAB15372DA0004ABA9D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F04FFAA15372D9F004ABA9D /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		6F04FFA21537094E004ABA9D /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 		6F04FFA5153714C6004ABA9D /* NSDate+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Helper.h"; sourceTree = "<group>"; };
 		6F04FFA6153714C6004ABA9D /* NSDate+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Helper.m"; sourceTree = "<group>"; };
+		6F04FFAA15372D9F004ABA9D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F04FFAB15372DA0004ABA9D /* AddressBookUI.framework in Frameworks */,
 				6F04FFA01536F28E004ABA9D /* MapKit.framework in Frameworks */,
 				6F04FE821536E5D4004ABA9D /* CoreLocation.framework in Frameworks */,
 				6F04FE661536E2E0004ABA9D /* UIKit.framework in Frameworks */,
@@ -79,6 +82,7 @@
 		6F04FE641536E2E0004ABA9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6F04FFAA15372D9F004ABA9D /* AddressBookUI.framework */,
 				6F04FF9F1536F28D004ABA9D /* MapKit.framework */,
 				6F04FE811536E5D4004ABA9D /* CoreLocation.framework */,
 				6F04FE651536E2E0004ABA9D /* UIKit.framework */,

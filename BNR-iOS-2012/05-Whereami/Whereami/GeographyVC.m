@@ -9,6 +9,7 @@
 #import "GeographyVC.h"
 #import "MapPoint.h"
 #import "NSDate+Helper.h"
+#import <AddressBookUI/AddressBookUI.h>
 
 @implementation GeographyVC
 
@@ -69,7 +70,8 @@
 		return;
 	}
 	
-	[self foundLocation:newLocation];
+//	[self foundLocation:newLocation];
+	[self foundMappedLocaton:newLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -139,6 +141,37 @@
 	[self.activityIndicator stopAnimating];
 	[self.locationManager stopUpdatingLocation];
 } //foundLocation:
+
+
+//=========================================================== 
+// - (void)foundMappedLocaton:(CLLocation *)location
+//
+//=========================================================== 
+- (void)foundMappedLocaton:(CLLocation *)location
+{
+	CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+	[geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error)
+	{
+		// Create an instance of MapPoint w/ the current data.
+		NSLog(@"placemarks = %@", placemarks);
+		NSLog(@"placemarks count = %d", [placemarks count]);
+		CLPlacemark *placemark = [placemarks lastObject];
+		NSString *name = placemark.name;
+		NSLog(@"name = %@",name);
+		NSString *addressString = ABCreateStringWithAddressDictionary(placemark.addressDictionary, NO);
+		MapPoint *mp = [[MapPoint alloc] initWithCoordinate:location.coordinate title:name andSubtitle:addressString];
+		[self.worldView addAnnotation:mp];
+		
+		MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location.coordinate, 250, 250);
+		[self.worldView setRegion:region animated:YES];
+		
+	}];
+	
+	self.locationTitleField.text = @"";
+	self.locationTitleField.hidden = NO;
+	[self.activityIndicator stopAnimating];
+	[self.locationManager stopUpdatingLocation];
+} //foundMappedLocaton:
 
 
 #pragma mark - Properties

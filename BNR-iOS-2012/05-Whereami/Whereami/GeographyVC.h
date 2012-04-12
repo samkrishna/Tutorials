@@ -39,5 +39,6 @@ UITextFieldDelegate>
 
 - (void)findLocation;
 - (void)foundLocation:(CLLocation *)location;
+- (void)foundMappedLocaton:(CLLocation *)location;
 
 @end

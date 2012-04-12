@@ -37,4 +37,7 @@ UITextFieldDelegate>
 @property (strong) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong) IBOutlet UITextField *locationTitleField;
 
+- (void)findLocation;
+- (void)foundLocation:(CLLocation *)location;
+
 @end

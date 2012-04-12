@@ -7,6 +7,8 @@
 //
 
 #import "GeographyVC.h"
+#import "MapPoint.h"
+#import "NSDate+Helper.h"
 
 @implementation GeographyVC
 
@@ -61,7 +63,13 @@
 		didUpdateToLocation:(CLLocation *)newLocation
 					 fromLocation:(CLLocation *)oldLocation
 {
-	NSLog(@"%@", newLocation);	
+	NSLog(@"%@", newLocation);
+	NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
+	if (t < -180) {
+		return;
+	}
+	
+	[self foundLocation:newLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -82,6 +90,56 @@
 	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
 	[self.worldView setRegion:region animated:YES];
 }
+
+#pragma mark - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+	[self findLocation];
+	[textField resignFirstResponder];
+	return YES;
+}
+
+#pragma mark - Methods
+
+
+//=========================================================== 
+// - (void)findLocation
+//
+//=========================================================== 
+- (void)findLocation
+{
+	[self.locationManager startUpdatingLocation];
+	[self.activityIndicator startAnimating];
+	self.locationTitleField.hidden = YES;
+} //findLocation
+
+//=========================================================== 
+// - (void)foundLocation:(CLLocation *)location
+//
+//=========================================================== 
+- (void)foundLocation:(CLLocation *)location
+{
+	CLLocationCoordinate2D coord = location.coordinate;
+	
+	// Get the date
+	NSString *timestamp = [NSString stringWithFormat:@"Tagged on %@ at %@", 
+												 [[NSDate date] formattedStringUsingFormat:@"dd MMM yyyy"],
+												 [[NSDate date] formattedStringUsingFormat:@"hh:mm:ss"]];
+	
+	// Create an instance of MapPoint w/ the current data.
+	MapPoint *mp = [[MapPoint alloc] initWithCoordinate:coord title:self.locationTitleField.text andSubtitle:timestamp];
+	[self.worldView addAnnotation:mp];
+	
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+	[self.worldView setRegion:region animated:YES];
+	
+	self.locationTitleField.text = @"";
+	self.locationTitleField.hidden = NO;
+	[self.activityIndicator stopAnimating];
+	[self.locationManager stopUpdatingLocation];
+} //foundLocation:
+
 
 #pragma mark - Properties
 @synthesize locationManager = locationManager_;

@@ -20,8 +20,9 @@
 	self.locationManager.distanceFilter = kCLDistanceFilterNone;
 	self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 	[self.locationManager startUpdatingLocation];
+
 	// Only works on device.
-	[self.locationManager startUpdatingHeading];
+//	[self.locationManager startUpdatingHeading];
 	
 	return self;
 }
@@ -36,6 +37,10 @@
 {
 	[super viewDidLoad];
 	// Do any additional setup after loading the view from its nib.
+	
+	// This line won't work in -init. All view objects need to be initialized in viewDidLoad:
+	// All view code needs to be initialized in the view lifecycle
+	self.worldView.showsUserLocation = YES;
 }
 
 - (void)viewDidUnload
@@ -56,7 +61,7 @@
 		didUpdateToLocation:(CLLocation *)newLocation
 					 fromLocation:(CLLocation *)oldLocation
 {
-	NSLog(@"%@", newLocation);
+	NSLog(@"%@", newLocation);	
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
@@ -69,6 +74,18 @@
 	NSLog(@"%@", newHeading);
 }
 
+#pragma mark - Map View Delegate
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+	CLLocationCoordinate2D loc = userLocation.coordinate;
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(loc, 250, 250);
+	[self.worldView setRegion:region animated:YES];
+}
+
 #pragma mark - Properties
 @synthesize locationManager = locationManager_;
+@synthesize worldView = worldView_;
+@synthesize activityIndicator = activityIndicator_;
+@synthesize locationTitleField = locationTitleField_;
 @end

@@ -29,8 +29,12 @@
 
 @interface GeographyVC : UIViewController
 <CLLocationManagerDelegate,
-MKMapViewDelegate>
+MKMapViewDelegate,
+UITextFieldDelegate>
 
 @property (strong) CLLocationManager *locationManager;
+@property (strong) IBOutlet MKMapView *worldView;
+@property (strong) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (strong) IBOutlet UITextField *locationTitleField;
 
 @end

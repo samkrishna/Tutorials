@@ -8,15 +8,48 @@
 
 #import "AppDelegate.h"
 
+// I'm starting to see how bad habits are getting created around the App Delegate.
+// Putting so-called "Global Functional State" into the App delegate for a real app is a BAD IDEA.
+// Classes should have one and only one functional responsibility.
+// An App Delegate's functional responsibility is to simply bootstrap the app into runtime mode. Period.
+// CoreLocation-delegate methods should have their own delegate object (not App Delegate)
+// Same w/ JSON-loading/hydration (which is what we dealt w/ on the MoCO project).
+// AppDelegates are the first candidate for a refactor.
+
+@interface AppDelegate ()
+<CLLocationManagerDelegate>
+
+@property (strong) CLLocationManager *locationManager;
+
+@end
+
 @implementation AppDelegate
+
+- (void)dealloc
+{
+	self.locationManager.delegate = nil;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+	// Load the nib
 	NSArray *nibs = [[NSBundle mainBundle] loadNibNamed:@"MainWindow" owner:self options:nil];
 	self.window = [nibs lastObject];
 	// Override point for customization after application launch.
 	self.window.backgroundColor = [UIColor whiteColor];
 	[self.window makeKeyAndVisible];
+	
+	// Initialize the Location Manager
+	self.locationManager = [[CLLocationManager alloc] init];
+	self.locationManager.delegate = self;
+	self.locationManager.distanceFilter = kCLDistanceFilterNone;
+	self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	[self.locationManager startUpdatingLocation];
+	// Only works on device.
+	[self.locationManager startUpdatingHeading];
+	
+	[self doSomethingWeird];
+	
 	return YES;
 }
 
@@ -47,6 +80,35 @@
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark - Location Manager Delegate
+
+- (void)locationManager:(CLLocationManager *)manager
+		didUpdateToLocation:(CLLocation *)newLocation
+					 fromLocation:(CLLocation *)oldLocation
+{
+	NSLog(@"%@", newLocation);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+	NSLog(@"Could not find location: %@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading
+{
+	NSLog(@"%@", newHeading);
+}
+
+#pragma mark - Methods
+
+- (void)doSomethingWeird
+{
+	NSLog(@"Line 1");
+	NSLog(@"Line 2");
+	NSLog(@"Line 3");
+}
+
 #pragma mark - Properties
 @synthesize window = _window;
+@synthesize locationManager = locationManager_;
 @end

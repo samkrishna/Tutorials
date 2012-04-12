@@ -20,8 +20,18 @@ int main(int argc, const char * argv[])
 			[items addObject:p];
 		}
 		
-		for (int i = 0; i < 10; i++) {
-			NSLog(@"Possession = %@", [items objectAtIndex:i]);
+		for (Possession *p in items) {
+			NSLog(@"%@", p);
+		}
+		
+		// Challenge problem
+		@try {
+			Possession *p = [items objectAtIndex:10];
+			NSLog(@"%@", p);
+		}
+		@catch (NSException *exception) {
+			NSLog(@"exception = %@", exception);
+			NSLog(@"backtrace = %@", [exception callStackSymbols]);
 		}
 	}
 	

@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SOCQ/SOCQ.xcodeproj">
+      location = "group:BlocksKit/BlocksKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BlocksKit/BlocksKit.xcodeproj">
+      location = "group:SOCQ/SOCQ.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:01-Quiz/Quiz.xcodeproj">
@@ -18,5 +18,8 @@
    </FileRef>
    <FileRef
       location = "group:04-Whereami/04-Whereami.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:05-Whereami/05-Whereami.xcodeproj">
    </FileRef>
 </Workspace>

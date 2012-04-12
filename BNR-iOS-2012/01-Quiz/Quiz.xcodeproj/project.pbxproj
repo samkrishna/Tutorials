@@ -32,10 +32,10 @@
 		6F9A51271535A0A60090A2C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F9A51281535A0A60090A2C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6F9A51301535A0F60090A2C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		6F9A513A1535A8250090A2C6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		6F9A513C1535A8290090A2C6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		6F9A51461535AC600090A2C6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		6F9A51491535AC650090A2C6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6F9A513A1535A8250090A2C6 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
+		6F9A513C1535A8290090A2C6 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		6F9A51461535AC600090A2C6 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		6F9A51491535AC650090A2C6 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6F9A51091535A0A60090A2C6 = {
+		6F04FE7F1536E370004ABA9D /* Assets */ = {
 			isa = PBXGroup;
 			children = (
 				6F9A51491535AC650090A2C6 /* Default@2x.png */,
 				6F9A51461535AC600090A2C6 /* Default.png */,
 				6F9A513C1535A8290090A2C6 /* Icon.png */,
 				6F9A513A1535A8250090A2C6 /* Icon@2x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		6F9A51091535A0A60090A2C6 = {
+			isa = PBXGroup;
+			children = (
 				6F9A511E1535A0A60090A2C6 /* Quiz */,
 				6F9A51171535A0A60090A2C6 /* Frameworks */,
 				6F9A51151535A0A60090A2C6 /* Products */,
@@ -89,6 +96,7 @@
 				6F9A51271535A0A60090A2C6 /* AppDelegate.h */,
 				6F9A51281535A0A60090A2C6 /* AppDelegate.m */,
 				6F9A512F1535A0F60090A2C6 /* MainWindow.xib */,
+				6F04FE7F1536E370004ABA9D /* Assets */,
 				6F9A511F1535A0A60090A2C6 /* Supporting Files */,
 			);
 			path = Quiz;

@@ -121,7 +121,7 @@
 			attributes = {
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = 6FED23A61536450B00F2F20C /* Build configuration list for PBXProject "RandomPossesions" */;
+			buildConfigurationList = 6FED23A61536450B00F2F20C /* Build configuration list for PBXProject "03-RandomPossesions" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -219,7 +219,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6FED23A61536450B00F2F20C /* Build configuration list for PBXProject "RandomPossesions" */ = {
+		6FED23A61536450B00F2F20C /* Build configuration list for PBXProject "03-RandomPossesions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6FED23B91536450B00F2F20C /* Debug */,
@@ -235,6 +235,7 @@
 				6FED23BD1536450B00F2F20C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

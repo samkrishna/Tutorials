@@ -17,6 +17,7 @@
 		6F04FF9D1536F18B004ABA9D /* GeographyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F04FF9B1536F18B004ABA9D /* GeographyVC.m */; };
 		6F04FF9E1536F18B004ABA9D /* GeographyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F04FF9C1536F18B004ABA9D /* GeographyView.xib */; };
 		6F04FFA01536F28E004ABA9D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F04FF9F1536F28D004ABA9D /* MapKit.framework */; };
+		6F04FFA31537094E004ABA9D /* MapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F04FFA21537094E004ABA9D /* MapPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		6F04FF9B1536F18B004ABA9D /* GeographyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeographyVC.m; sourceTree = "<group>"; };
 		6F04FF9C1536F18B004ABA9D /* GeographyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GeographyView.xib; path = en.lproj/GeographyView.xib; sourceTree = "<group>"; };
 		6F04FF9F1536F28D004ABA9D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		6F04FFA11537094E004ABA9D /* MapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPoint.h; sourceTree = "<group>"; };
+		6F04FFA21537094E004ABA9D /* MapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				6F04FE751536E2E1004ABA9D /* AppDelegate.m */,
 				6F04FF9A1536F18B004ABA9D /* GeographyVC.h */,
 				6F04FF9B1536F18B004ABA9D /* GeographyVC.m */,
+				6F04FFA11537094E004ABA9D /* MapPoint.h */,
+				6F04FFA21537094E004ABA9D /* MapPoint.m */,
 				6F04FF9C1536F18B004ABA9D /* GeographyView.xib */,
 				6F04FE6C1536E2E1004ABA9D /* Supporting Files */,
 			);
@@ -171,6 +176,7 @@
 				6F04FE721536E2E1004ABA9D /* main.m in Sources */,
 				6F04FE761536E2E1004ABA9D /* AppDelegate.m in Sources */,
 				6F04FF9D1536F18B004ABA9D /* GeographyVC.m in Sources */,
+				6F04FFA31537094E004ABA9D /* MapPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

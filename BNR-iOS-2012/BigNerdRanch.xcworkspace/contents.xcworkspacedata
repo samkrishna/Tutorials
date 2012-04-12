@@ -17,6 +17,6 @@
       location = "group:03-RandomPossesions/03-RandomPossesions.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Whereami/04-Whereami.xcodeproj">
+      location = "group:04-Whereami/04-Whereami.xcodeproj">
    </FileRef>
 </Workspace>
